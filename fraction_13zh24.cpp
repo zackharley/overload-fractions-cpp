@@ -171,11 +171,7 @@ bool Fraction::operator<=(const int& right) {
 }
 
 ostream& operator<<(ostream& out, const Fraction& fraction) {
-	if(fraction.denominatorVal == 1) {
-		out << fraction.numeratorVal;
-	} else {
-		out << fraction.numeratorVal << "/" << fraction.denominatorVal;
-	}
+	out << fraction.numeratorVal << "/" << fraction.denominatorVal;
 	return out;
 }
 
