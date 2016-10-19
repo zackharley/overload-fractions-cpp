@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#include "fraction_13zh24.h"
+#include "fraction_13zh24.h"	// Add your netid to the #include
 
 int main() {
 
@@ -79,7 +79,7 @@ int main() {
 	if (1 < test6)
 		cout << "Second mixed type comparison passed." << endl;
 
-	// // Test input, exception and +=:
+	// Test input, exception and +=:
 	Fraction sum(0);
 	Fraction fin;
 	cout << "\nSumming fractions. Enter fractions as \"1/2\" or just enter a single integer." << endl;
@@ -94,54 +94,6 @@ int main() {
 		}
 	} while (fin != 0);
 	cout << "Sum is: " << sum << endl;
-
-	// My tests
-	Fraction myTest1(4, 2);
-	if(2 == myTest1) 
-		cout << endl << "My equality 1" << endl;
-	if(myTest1 == 2)
-		cout << "My equality 2" << endl;
-	Fraction myTest2(4, 3);
-	if(myTest2 != 4)
-		cout << "My inequality 1" << endl;
-	if(4 != myTest2) 
-		cout << "My inequality 2" << endl;
-	Fraction myTest3(8, 3);
-	if(myTest3 > 2) 
-		cout << "My greater than 1" << endl;
-	if(3 > myTest3)
-		cout << "My greater than 2" << endl;
-	if(2 >= myTest1)
-		cout << "My greater than or equal 1" << endl;
-	if(myTest1 >= 2)
-		cout << "my greater than or equal 2" << endl;
-	Fraction myTest4(11, 3);
-	if(3 < myTest4)
-		cout << "My less than 1" << endl;
-	if(myTest4 < 4)
-		cout << "my less than 2" << endl;
-	if(2 <= myTest1)
-		cout << "My less than or equal 1" << endl;
-	if(myTest1 <= 2)
-		cout << "my less than or equal 2" << endl;
-	Fraction myTest5(4, 3);
-	Fraction myTest6 = myTest5 + 2;
-	cout << "Should be \"10/3\": " << myTest6 << endl;
-	Fraction myTest7 = 3 + myTest5;
-	cout << "Should be \"13/3\": " << myTest7 << endl;
-	Fraction myTest8(10, 4);
-	Fraction myTest9 = myTest8 * 2;
-	cout << "Should be \"5/1\": " << myTest9 << endl;
-	Fraction myTest10 = 4 * myTest8;
-	cout << "Should be \"10/1\": " << myTest10 << endl;
-	Fraction myTest11(3, 4);
-	Fraction myTest12 = myTest11 / 2;
-	cout << "Should be \"3/8\": " << myTest12 << endl;
-	Fraction myTest13 = 8 / myTest11;
-	cout << "Should be \"32/3\": " << myTest13 << endl;
-	Fraction myTest14(3, 10);
-	myTest14 += 3;
-	cout << "Should be \"33/10\": " << myTest14 << endl;
 
 	return 0;
 

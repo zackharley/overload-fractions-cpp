@@ -96,7 +96,7 @@ Fraction& Fraction::operator+=(const int& right) {
 		int leftNumerator = numeratorVal;
 		int rightNumerator = right * denominatorVal;
 		int top = leftNumerator + rightNumerator;
-		int bottom = left.numerator();
+		int bottom = denominatorVal;
 		int gcd;
 
 		gcd = greatestCommonDenominator(top, bottom);
@@ -171,7 +171,11 @@ bool Fraction::operator<=(const int& right) {
 }
 
 ostream& operator<<(ostream& out, const Fraction& fraction) {
-	out << fraction.numeratorVal << "/" << fraction.denominatorVal;
+	if(fraction.denominatorVal == 1) {
+		out << fraction.numeratorVal;
+	} else {
+		out << fraction.numeratorVal << "/" << fraction.denominatorVal;
+	}
 	return out;
 }
 
